@@ -21,7 +21,7 @@ namespace ServerSidePrograming
 
         [Function("GetGeneratedImages")]
         public async Task<HttpResponseData> GetGeneratedImages(
-        [HttpTrigger(AuthorizationLevel.Function, "get", Route = "images/{guid}")] HttpRequestData req, Guid guid)
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "images/{guid}")] HttpRequestData req, Guid guid)
         {
             var containerClient = _blobServiceClient.GetBlobContainerClient("weather-images");
             var blobs = containerClient.GetBlobs();

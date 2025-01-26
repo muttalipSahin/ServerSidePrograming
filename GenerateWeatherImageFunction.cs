@@ -18,10 +18,6 @@ namespace ServerSideProgramming
         private readonly BlobServiceClient _blobServiceClient;
         private static readonly HttpClient _httpClient = new HttpClient();
 
-        //private const string UnsplashApiUrl = "https://api.unsplash.com/photos/random?query=weather&client_id=7kSVaZfdapt6ios1FqvWsLwXuGJfjmG009iCvQPDKt4";
-        //private const string UnsplashApiUrl = "https://api.unsplash.com/photos/random?query=weather&client_id=2Lh2frmnmzbSul3lPStuW_P6_sLMEEAGtrV9oz4MIWQ";
-        //private const string UnsplashApiUrl = "https://api.unsplash.com/photos/random?query=weather&client_id=kla49dlH-AmOvOs_NfKZJuAR_noD2LXDlLjU3w_3INk";
-
         private readonly string UnsplashApiUrl = "https://api.unsplash.com/photos/random?query=weather&client_id=";
         private readonly string _unsplashApiKey;
 

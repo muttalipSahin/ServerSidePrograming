@@ -1,0 +1,18 @@
+@baseUrl = http://weather-func-{UNIQUERESOURCEGROUPCODE}.azurewebsites.net/api
+
+### Start Weather Job
+# This request starts a weather job and stores the returned GUID for later use.
+POST {{baseUrl}}/StartWeatherJob
+Content-Type: application/json
+
+> {% response.body $.guid %}
+
+### Get Job Status
+# Uses the GUID from the previous response
+GET {{baseUrl}}/jobstatus/{{guid}}
+Accept: application/json
+
+### Get Generated Images
+# Uses the same GUID to fetch the generated image
+GET {{baseUrl}}/images/{{guid}}
+Accept: application/json
